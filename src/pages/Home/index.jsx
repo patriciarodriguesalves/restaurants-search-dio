@@ -38,7 +38,7 @@ const Home = () => {
     if (hasRestaurants) {
       return (
         <>
-          <Title size="large">Na sua Área</Title>
+          <Title size="large">Na sua área</Title>
           <Carousel {...settings}>
             {restaurants.map((restaurant) => (
               <ImageCard key={restaurant.place_id} restaurant={restaurant} />
@@ -80,10 +80,10 @@ const Home = () => {
     <Wrapper>
       <Container>
         <Search>
-          <Logo src={logo} alt="logo da empresa" />
+          <Logo src={logo} alt="company logo" />
           <TextField
             outlined
-            label="Pesquisar"
+            label="Pesquise restaurantes"
             trailingIcon={<MaterialIcon role="button" icon="search" />}>
             <Input type="text" value={value} onKeyPress={handleKeyPress} onChange={handleChange} />
           </TextField>
@@ -99,7 +99,7 @@ const Home = () => {
               <Text size="medium">
                 {restaurantSelected?.opening_hours?.open_now
                   ? 'Aberto agora :)'
-                  : 'Fechado neste momento :('}
+                  : 'Fechado no momento :('}
               </Text>
             </>
           ) : (

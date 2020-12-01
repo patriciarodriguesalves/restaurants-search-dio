@@ -19,7 +19,7 @@ const ResturantCard = ({ restaurant, onClick }) => {
         imageLoaded={imageLoaded}
         onLoad={() => setImageLoaded(true)}
         src={restaurant.photos ? restaurant.photos[0].getUrl() : restaurant.icon}
-        alt="foto do restaurante"
+        alt="foto de restaurantes"
       />
       {!imageLoaded && <ImageSkeleton width="100px" height="100px" />}
     </Restaurant>
